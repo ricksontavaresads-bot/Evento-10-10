@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planejamento 10.10 · Dia D do Antecipa Black · Eco Digital</title>
+<style>
+  :root{
+    --ink:#17211a;
+    --muted:#5b6b5e;
+    --bg:#f2f5f0;
+    --card:#ffffff;
+    --line:#e2e8df;
+    --accent:#3e7a4e;
+    --accent-soft:#dff0e3;
+    --accent-deep:#2c5c3a;
+    --chip:#edf2eb;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Inter',-apple-system,'Segoe UI',Roboto,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+
+  /* ===== HERO ===== */
+  .hero{
+    background:linear-gradient(155deg,#14231a 0%,#21402a 55%,#2d5234 100%);
+    color:#fff;
+    padding:52px 0 60px;
+    text-align:center;
+  }
+  .hero .brand{
+    display:flex;align-items:center;justify-content:center;gap:12px;
+    margin-bottom:40px;color:#a9c2ab;font-weight:700;font-size:14px;
+    letter-spacing:.14em;text-transform:uppercase;
+  }
+  .logo-img{
+    width:84px;height:84px;border-radius:18px;object-fit:cover;
+    box-shadow:0 6px 18px rgba(0,0,0,.35);
+  }
+  .logo-sm{width:56px;height:56px;border-radius:12px}
+  footer .logo-sm{margin:0 auto 14px}
+  .hero .eyebrow{
+    display:inline-block;background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.25);
+    padding:7px 18px;border-radius:999px;
+    font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+    color:#dcefe0;margin-bottom:14px;
+  }
+  .hero h1{
+    font-size:clamp(64px,12vw,104px);font-weight:900;letter-spacing:-.02em;
+    line-height:1;margin-bottom:14px;
+  }
+  .hero .subtitle{
+    font-size:clamp(19px,3vw,25px);font-weight:700;color:#eef7ef;margin-bottom:10px;
+  }
+  .hero .theme{
+    font-size:15px;color:#b3c9b6;max-width:640px;margin:0 auto;
+  }
+  .hero .theme strong{color:#a5e8b4;font-weight:700}
+
+  /* ===== SECTIONS ===== */
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:46px 48px;
+    margin:34px 0;
+    box-shadow:0 1px 3px rgba(23,33,26,.05);
+  }
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+  .sec-emoji{
+    width:48px;height:48px;flex:0 0 48px;border-radius:14px;
+    background:var(--accent-soft);
+    display:flex;align-items:center;justify-content:center;font-size:23px;
+  }
+  .sec-head h2{
+    font-size:21px;font-weight:800;text-transform:uppercase;
+    letter-spacing:.05em;line-height:1.25;
+  }
+  .card p.lead{font-size:16.5px;color:#243328;margin-bottom:22px}
+  .card p{color:var(--muted);font-size:15.5px}
+  .card p b, .card p strong{color:var(--ink);font-weight:700}
+
+  ul.list{list-style:none;margin:0}
+  ul.list li{
+    position:relative;padding:12px 0 12px 30px;
+    border-bottom:1px solid var(--line);font-size:15.5px;color:#243328;
+  }
+  ul.list li:last-child{border-bottom:none}
+  ul.list li::before{
+    content:"";position:absolute;left:4px;top:21px;
+    width:10px;height:10px;border-radius:3px;background:var(--accent);
+  }
+
+  .subhead{
+    font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent-deep);margin:30px 0 8px;
+  }
+  .subhead:first-child{margin-top:0}
+
+  .callout{
+    background:var(--accent-soft);border:1px solid #bfe0c6;border-radius:14px;
+    padding:18px 22px;font-size:15px;color:#1e3a26;font-weight:600;margin-top:22px;
+  }
+
+  /* ===== IMAGEM DE REFERÊNCIA ===== */
+  .refimg{
+    border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:22px;
+  }
+  .refimg img{width:100%;display:block}
+  .refimg figcaption{
+    padding:14px 18px;font-size:13.5px;color:var(--muted);background:#f7faf5;
+    border-top:1px solid var(--line);
+  }
+
+  /* ===== MECÂNICA ===== */
+  .mec{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+  .mec-item{background:#f7faf5;border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+  .mec-item h3{font-size:15.5px;font-weight:800;margin-bottom:6px;color:var(--ink)}
+  .mec-item p{font-size:14px;color:#3c4d41}
+
+  /* ===== TIMELINE ===== */
+  .timeline{margin-top:18px;display:flex;flex-direction:column}
+  .tl-row{display:flex;gap:16px;align-items:flex-start;padding-bottom:16px;position:relative}
+  .tl-row:last-child{padding-bottom:0}
+  .tl-row::before{
+    content:"";position:absolute;left:106px;top:34px;bottom:0;
+    width:2px;background:var(--line);
+  }
+  .tl-row:last-child::before{display:none}
+  .tl-time{
+    flex:0 0 110px;text-align:right;font-weight:800;font-size:12.5px;
+    color:var(--accent-deep);letter-spacing:.04em;padding-top:6px;line-height:1.4;
+  }
+  .tl-time span{display:block;font-size:10.5px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+  .tl-dot{
+    position:relative;z-index:1;flex:0 0 14px;width:14px;height:14px;border-radius:50%;
+    background:var(--accent);margin-top:9px;border:3px solid var(--accent-soft);
+  }
+  .tl-txt{font-size:15.5px;color:#243328;padding-top:4px}
+  .tl-txt b{font-weight:700}
+
+  /* ===== PASSOS ===== */
+  ol.steps{list-style:none;counter-reset:s;margin-top:18px}
+  ol.steps li{
+    counter-increment:s;position:relative;padding:14px 0 14px 52px;
+    border-bottom:1px solid var(--line);font-size:15.5px;color:#243328;
+  }
+  ol.steps li:last-child{border-bottom:none}
+  ol.steps li::before{
+    content:counter(s,decimal-leading-zero);position:absolute;left:0;top:12px;
+    width:36px;height:36px;border-radius:10px;background:var(--accent);
+    color:#fff;font-weight:800;font-size:13px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  ol.steps li b{font-weight:700}
+
+  /* ===== ROTEIROS ===== */
+  .vid{background:#f7faf5;border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:14px}
+  .vid-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+  .vid-head h3{font-size:16px;font-weight:800}
+  .vid-meta{
+    font-size:11.5px;font-weight:800;color:var(--accent-deep);
+    background:var(--accent-soft);border-radius:999px;padding:3px 10px;
+    letter-spacing:.05em;text-transform:uppercase;
+  }
+  .vid ol{margin:0;padding-left:0;list-style:none}
+  .vid ol li{
+    padding:10px 0;font-size:14.5px;color:#243328;
+    border-bottom:1px dashed var(--line);
+  }
+  .vid ol li:last-child{border-bottom:none}
+  .vid ol li b{font-weight:800;color:var(--accent-deep)}
+  .vid ol li .fala{display:block;color:#243328;font-weight:500;margin-top:2px}
+
+  /* ===== REGRAS ===== */
+  .rules{margin-top:18px}
+  .rule{
+    display:flex;gap:12px;align-items:flex-start;
+    background:#f7faf5;border:1px solid var(--line);border-radius:12px;
+    padding:12px 16px;margin-bottom:10px;font-size:14.5px;color:#243328;
+  }
+  .rule .rdot{
+    flex:0 0 10px;width:10px;height:10px;border-radius:3px;
+    background:var(--accent);margin-top:7px;
+  }
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:#0d1710;color:#a3b8a6;text-align:center;
+    padding:44px 20px;margin-top:60px;
+  }
+  footer .f-logo{font-weight:900;font-size:17px;letter-spacing:.1em;color:#fff;text-transform:uppercase}
+  footer p{margin-top:8px;font-size:13.5px}
+  footer .note{margin-top:4px;font-size:12.5px;color:#6b7f6d}
+
+  @media (max-width:760px){
+    .card{padding:30px 22px;border-radius:16px}
+    .mec{grid-template-columns:1fr}
+    .tl-row::before{left:92px}
+    .tl-time{flex:0 0 96px}
+    .hero h1{font-size:56px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="brand">
+    <img class="logo-img" src="data:image/jpeg;base64,{{LOGO}}" alt="Eco Digital">
+    <span>Eco Digital</span>
+  </div>
+  <div class="eyebrow">Planejamento estratégico · Outubro 2026</div>
+  <h1>10.10</h1>
+  <p class="subtitle">Dia D do Antecipa Black</p>
+  <p class="theme">3 a 5 produtos em oferta, <strong>só no sábado</strong>, e o grupo VIP entra primeiro.</p>
+</header>
+
+<div class="wrap">
+
+  <section class="card">
+    <div class="sec-head">
+      <div class="sec-emoji">📅</div>
+      <h2>O que é a data dupla</h2>
+    </div>
+    <p class="lead">As datas duplas, como 10.10 e 11.11, vieram da Ásia e viraram um dos maiores gatilhos de compra do varejo digital brasileiro: o 10.10 já movimentou mais de R$ 150 milhões em 24 horas no e-commerce do país (fonte: imprensa de varejo, out/2026).</p>
+    <p>No dia em que os grandes marketplaces estouram o feed de ofertas, o consumidor chega com intenção de compra, e a loja entra na onda com o Dia D do Antecipa Black, no formato que já é a força da casa: <strong>o grupo VIP na frente</strong>.</p>
+    <figure class="refimg">
+      <img src="data:image/jpeg;base64,{{IMG1010}}" alt="Referência de comunicação do 10.10 nos grandes marketplaces">
+      <figcaption>Referência de mercado: Shopee, Amazon e Mercado Livre já exploram o 10.10. A imagem é inspiração para entender a força da data, não um modelo a copiar.</figcaption>
+    </figure>
+  </section>
+
+  <section class="card">
+    <div class="sec-head">
+      <div class="sec-emoji">⚙️</div>
+      <h2>A mecânica</h2>
+    </div>
+    <p class="lead">O grupo VIP entra primeiro.</p>
+    <p>De 3 a 5 produtos em oferta, só no sábado. O grupo VIP vê a lista primeiro, de manhã; o público entra na sequência, com <strong>[condição de pagamento]</strong> em destaque, e cada anúncio do dia convida para o grupo.</p>
+    <div class="mec">
+      <div class="mec-item">
+        <h3>3 a 5 produtos</h3>
+        <p>Oferta enxuta e fácil de comunicar: poucas peças, decisão rápida.</p>
+      </div>
+      <div class="mec-item">
+        <h3>Só no sábado</h3>
+        <p>Começo e fim claros no Dia D. A urgência vem do formato do evento.</p>
+      </div>
+      <div class="mec-item">
+        <h3>VIP na frente</h3>
+        <p>O grupo vê a lista primeiro, de manhã, e gera movimento antes do público.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="sec-head">
+      <div class="sec-emoji">⏱️</div>
+      <h2>O Dia D: hora a hora</h2>
+    </div>
+    <p class="lead">Tudo começa na véspera, 09/10, e se resolve no sábado, 10/10.</p>
+    <div class="timeline">
+      <div class="tl-row">
+        <div class="tl-time">19h<span>09/10 · sexta</span></div>
+        <div class="tl-dot"></div>
+        <div class="tl-txt"><b>O vídeo de aviso entra no ar</b> e convida ao grupo.</div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time">09h<span>10/10 · sábado</span></div>
+        <div class="tl-dot"></div>
+        <div class="tl-txt"><b>O grupo VIP vê a lista primeiro.</b></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time">10h<span>10/10 · sábado</span></div>
+        <div class="tl-dot"></div>
+        <div class="tl-txt"><b>Abre para o público:</b> vídeo + post.</div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time">14h<span>10/10 · sábado</span></div>
+        <div class="tl-dot"></div>
+        <div class="tl-txt"><b>Live de vendas</b> com a oferta em destaque.</div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time">20h<span>10/10 · sábado</span></div>
+        <div class="tl-dot"></div>
+        <div class="tl-txt"><b>Fecha.</b> Convite no ar: entre no grupo para não perder a próxima.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="sec-head">
+      <div class="sec-emoji">✅</div>
+      <h2>O que a loja faz</h2>
+    </div>
+    <p class="lead">Cinco passos para o Dia D sair redondo.</p>
+    <ol class="steps">
+      <li><b>Preparar a oferta do grupo VIP:</b> o grupo vê a lista primeiro no sábado.</li>
+      <li><b>Divulgar o grupo em todos os anúncios do dia:</b> cada criativo convida.</li>
+      <li><b>Definir a condição do dia:</b> ela entra em todo criativo.</li>
+      <li><b>Treinar o atendimento</b> para converter a entrada no grupo.</li>
+      <li><b>Preparar a live das 14h.</b></li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <div class="sec-head">
+      <div class="sec-emoji">🎬</div>
+      <h2>Os 3 roteiros de gravação</h2>
+    </div>
+    <p class="lead">Um roteiro para cada momento: o aviso (09/10, 19h), a oferta (sábado) e o convite ao grupo (sábado).</p>
+    <p>O vídeo de aviso entra no ar uma única vez, 09/10 às 19h. Antes disso, nada: a oferta vale só o sábado, e quem anuncia cedo esfria o Dia D. A fala segue a linguagem que o perfil já prova: preço em parcela, prazo real e chamada ao WhatsApp. O que está entre colchetes [ ] é preenchido na gravação.</p>
+
+    <div class="vid">
+      <div class="vid-head">
+        <h3>Roteiro 1 · O aviso</h3>
+        <span class="vid-meta">No ar: 09/10 · 19h</span>
+      </div>
+      <ol>
+        <li><b>GANCHO (0 a 3s)</b><span class="fala">Amanhã é 10.10, e quem é do grupo VIP compra antes.</span></li>
+        <li><b>CORPO (3 a 20s)</b><span class="fala">Amanhã, a oferta abre primeiro no grupo, com [condição de pagamento]. Depois, para o público.</span></li>
+        <li><b>FECHO (20 a 30s)</b><span class="fala">Entra no grupo agora: amanhã, quem está dentro decide primeiro.</span></li>
+      </ol>
+    </div>
+
+    <div class="vid">
+      <div class="vid-head">
+        <h3>Roteiro 2 · A oferta do dia</h3>
+        <span class="vid-meta">No ar: 10/10 · Dia D</span>
+      </div>
+      <ol>
+        <li><b>GANCHO (0 a 3s)</b><span class="fala">A oferta do 10.10 abriu, e o produto desta chamada é esse.</span></li>
+        <li><b>CORPO (3 a 20s)</b><span class="fala">O [produto] saindo por apenas [preço] em [parcela], com [condição de pagamento]. São poucos produtos, e valem só hoje.</span></li>
+        <li><b>FECHO (20 a 30s)</b><span class="fala">Chama no WhatsApp e responde rápido: oferta do dia não espera.</span></li>
+      </ol>
+    </div>
+
+    <div class="vid">
+      <div class="vid-head">
+        <h3>Roteiro 3 · Quem é do grupo viu primeiro</h3>
+        <span class="vid-meta">No ar: 10/10 · Dia D</span>
+      </div>
+      <ol>
+        <li><b>GANCHO (0 a 3s)</b><span class="fala">No 10.10, quem decide primeiro leva, e quem é do grupo decide antes de todo mundo.</span></li>
+        <li><b>CORPO (3 a 20s)</b><span class="fala">A oferta do dia tem poucos produtos: quem está no grupo viu a lista primeiro e garantiu a peça.</span></li>
+        <li><b>FECHO (20 a 30s)</b><span class="fala">Entra no grupo VIP e não fica de fora da próxima.</span></li>
+      </ol>
+    </div>
+
+    <div class="subhead">Como gravar</div>
+    <div class="rules">
+      <div class="rule"><span class="rdot"></span>9:16, de perto.</div>
+      <div class="rule"><span class="rdot"></span>15 a 30 segundos.</div>
+      <div class="rule"><span class="rdot"></span>Preço e condição na fala e na tela.</div>
+      <div class="rule"><span class="rdot"></span>Roteiro 1 no ar 09/10 às 19h, nada antes; roteiros 2 e 3 no sábado.</div>
+      <div class="rule"><span class="rdot"></span>Cada anúncio do dia convida ao grupo.</div>
+      <div class="rule"><span class="rdot"></span>Um take por produto, sempre com estoque confirmado.</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="sec-head">
+      <div class="sec-emoji">🗓️</div>
+      <h2>E o 11.11?</h2>
+    </div>
+    <p class="lead">A data dupla vira evento cheio em novembro.</p>
+    <p>O 11.11 (quarta, 11/11) é a ponte nomeada entre o Antecipa Black e a Black Friday (27/11) e repete o jogo do grupo VIP. A loja que roda bem o 10.10 chega treinada no 11.11.</p>
+  </section>
+
+</div>
+
+<footer>
+  <img class="logo-sm" src="data:image/jpeg;base64,{{LOGO}}" alt="Eco Digital">
+  <div class="f-logo">Eco Digital</div>
+  <p>10.10 · Dia D do Antecipa Black · Outubro · 2026</p>
+  <p class="note">Material de orientação estratégica · @ecodigitall</p>
+</footer>
+
+</body>
+</html>
